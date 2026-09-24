@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Data
+# We do not push raw or processed data to GitHub due to size and privacy
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models
+# Trained models are often too large for GitHub (use Git LFS, S3, or MLflow instead)
+models/*.joblib
+models/*.pkl
+models/*.h5
+models/*.pt
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Environment variables / Secrets
+.env
+.secrets
+
+# OS generated files
+.DS_Store
+Thumbs.db

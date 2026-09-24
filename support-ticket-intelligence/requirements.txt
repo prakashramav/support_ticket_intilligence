@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+xgboost
+lightgbm
+joblib
+jupyter
+datasets
+huggingface_hub
+pyarrow
+fastparquet
