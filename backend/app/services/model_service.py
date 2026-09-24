@@ -11,6 +11,12 @@ class ModelService:
         self.models: Dict[str, Any] = {}
         self.encoders: Dict[str, Any] = {}
         self.targets = ["category", "priority", "sentiment"]
+        
+        import sys
+        ml_path = str(settings.BASE_DIR.parent / "support-ticket-intelligence")
+        if ml_path not in sys.path:
+            sys.path.append(ml_path)
+            
         self._load_models()
 
     def _load_models(self):

@@ -54,7 +54,17 @@ async def global_exception_handler(request: Request, exc: Exception):
         },
     )
 
+@app.get("/")
+async def root():
+    return {"message": "Backend running successfully"}
+
+@app.get("/health")
+async def root_health():
+    return {"status": "healthy"}
+
 # Include routers
 app.include_router(health.router, prefix=settings.API_V1_STR, tags=["health"])
 app.include_router(predictions.router, prefix=settings.API_V1_STR, tags=["predictions"])
 app.include_router(analytics.router, prefix=settings.API_V1_STR, tags=["analytics"])
+
+

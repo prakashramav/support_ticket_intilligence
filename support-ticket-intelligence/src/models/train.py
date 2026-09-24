@@ -88,7 +88,7 @@ if __name__ == "__main__":
         print(f"Data not found at {df_path}. Run preprocessing first.")
     else:
         df = pd.read_csv(df_path)
-        # Train for available targets. Let's assume 'category' and 'priority' for now.
-        for target in ["category", "priority"]:
+        # Train for available targets
+        for target in ["category", "priority", "sentiment"]:
             if target in df.columns:
                 train_and_save_model(df, target)
